@@ -1,0 +1,27 @@
+# Header
+menu:
+  主页: /
+  技术: /categories/技术/
+  散文: /categories/散文/
+  美食: /categories/美食/
+  关于: /about/
+rss: /atom.xml
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive: 2
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+favicon: favicon32.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:

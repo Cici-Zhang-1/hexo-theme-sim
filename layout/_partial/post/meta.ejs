@@ -1,0 +1,29 @@
+<div class="<%= class_name %>">
+    <span><i class="fa fa-calendar"></i><a href="<%- url_for(config.archive_dir + '/' + date(post.date, 'YYYY/MM')) %>"><%= date(post.date) %></a></span>
+    <% if (post.area) { %>
+        <span><i class="fa fa-globe"></i><a href="javascript:void(0);"><%- post.area %></a></span>
+    <% } %>
+    <% if (post.weather) { %>
+        <span><i class="fa fa-cloud"></i><a href="javascript:void(0);"><%- post.weather %></a></span>
+    <% } %>
+    <% if (post.categories && post.categories.length){ %>
+        <span>
+            <i class="fa fa-bookmark"></i><%- list_categories(post.categories, {
+              show_count: false,
+              class: 'article-category',
+              style: 'none',
+              separator: '·'
+            }) %>
+        </span>
+    <% } %>
+    <% if (post.tags && post.tags.length){ %>
+        <span>
+            <i class="fa fa-tags"></i><%- list_tags(post.tags, {
+                show_count: false,
+                class: 'article-tag',
+                style: 'none',
+                separator: '·'
+            }) %>
+        </span>
+    <% } %>
+</div>
