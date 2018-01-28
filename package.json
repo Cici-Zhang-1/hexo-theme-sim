@@ -1,11 +1,10 @@
 {
   "name": "hexo-theme-sim",
   "version": "1.0.0",
-  "description": "A theme of hexo",
+  "description": "A theme of Hexo",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Cici",
-  "license": "BSD"
+  "repository": "https://github.com/mrzhangcc/hexo-theme-sim.git",
+  "author": "Cici <cczhang1987@hotmail.com>",
+  "license": "BSD",
+  "dependencies": {}
 }

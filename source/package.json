@@ -1,0 +1,11 @@
+{
+  "name": "hexo-theme-sim",
+  "version": "1.0.0",
+  "description": "A theme of Hexo",
+  "main": "index.js",
+  "author": "Cici",
+  "license": "BSD",
+  "dependencies": {
+    "bootstrap": "3.3.7"
+  }
+}

@@ -8,31 +8,26 @@ header .header-des {
 header .header-row {
     margin-bottom: 15px;
 }
-.img-logo {
+.header-row .header-img {
+    display: block;
     width: 15%;
-    border: 1px solid #02a93d;
     padding: 4px;
-    transition: all 0.2s ease-in-out 0s;
+    margin: auto;
 }
 
 @media (max-width: 768px) {
-    .img-logo {
-        width: 40%
+    .header-row .header-img {
+        width: 40%;
     }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-    .img-logo {
-        width: 30%
+    .header-row .header-img {
+        width: 30%;
     }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
-    .img-logo {
-        width: 15%
-    }
-}
-@media (min-width: 1200px) {
-    .img-logo {
-        width: 15%
+@media (min-width: 992px) {
+    .header-row .header-img {
+        width: 15%;
     }
 }
 .header-row > .navbar {
@@ -56,17 +51,36 @@ header .header-row {
 .navbar-none .navbar-nav > li > a {
     color: #777;
     border-bottom: 2px solid #fff;
+    -webkit-transition: border 1s linear, color 1s linear;
+    -o-transition: border 1s linear, color 1s linear;
+    -moz-transition: border 1s linear, color 1s linear;
+    transition: border 1s linear, color 1s linear;
 }
-
-.navbar-none .nav-center {
-    float: none;
-    margin: 0;
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
     text-align: center;
 }
-.nav-center > li {
+.navbar-toggle {
     float: none;
-    display: inline-block;
+    margin-right: 0;
 }
+@media (max-width: 767px) {
+    .navbar-none .nav-center {
+        margin: 0;
+        text-align: center;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-none .nav-center {
+        float: none;
+        margin: 0;
+        text-align: center;
+    }
+    .nav-center > li {
+        float: none;
+        display: inline-block;
+    }
+}
+
 
 main {
     padding: 0 0 15px;
@@ -100,6 +114,17 @@ main {
     color: #999;
     border: 1px solid #999;
 }
+@media (max-width: 767px) {
+    .paginator a.page-number, .paginator span.page-number {
+        display: none;
+    }
+    .paginator a.prev {
+        margin-right: 2rem;
+    }
+    .paginator a.next {
+        margin-left: 2rem;
+    }
+}
 
 article:not(:last-child){
     padding-bottom: 15px;
@@ -116,10 +141,25 @@ article:not(:last-child){
     text-decoration: none;
 }
 
+.article-title a {
+    /*border-bottom: 2px none #02a93d;
+    -webkit-transition: border 1s linear;
+    -o-transition: border 1s linear;
+    -moz-transition: border 1s linear;
+    transition: border 1s linear;*/
+}
+
 .article-title a:hover,
 .article-title a:focus {
     border-bottom: 2px solid #02a93d;
 }
+/*
+.article-title a:hover::after {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #02a93d;
+    content: "";
+}*/
 
 .article-meta {
     font-size: 1.6rem;
@@ -166,6 +206,26 @@ article:not(:last-child){
     padding: 15px;
 }
 
+.article-content .article-content-center{
+    text-align: center;
+}
+
+.article-content .article-content-center img{
+    max-width: 100%;
+}
+
+.article-content > p:not(.article-content-center) {
+    font-weight: normal;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","Helvetica Neue",Arial,sans-serif;
+    line-height: 2.0em;
+    word-spacing: 2px;
+    text-indent: 2em;
+}
+
+
+
 .article-nav {
     text-align: center;
     margin: 10px 0;
@@ -209,19 +269,19 @@ article:not(:last-child){
 .article-tag > span.article-tag-5 {
     font-size: 2.2rem;
 }
-.article-tag > span.article-tag-color-red {
+.article-tag > span.article-tag-color-red,  .article-tag > span.article-tag-color-red a {
     color: red;
 }
-.article-tag > span.article-tag-color-green {
+.article-tag > span.article-tag-color-green, .article-tag > span.article-tag-color-green a {
     color: green;
 }
-.article-tag > span.article-tag-color-blue {
+.article-tag > span.article-tag-color-blue, .article-tag > span.article-tag-color-blue a {
     color: blue;
 }
-.article-tag > span.article-tag-color-black {
+.article-tag > span.article-tag-color-black, .article-tag > span.article-tag-color-black a {
     color: black;
 }
-.article-tag > span.article-tag-color-yellow {
+.article-tag > span.article-tag-color-yellow, .article-tag > span.article-tag-color-yellow a {
     color: yellow;
 }
 footer {

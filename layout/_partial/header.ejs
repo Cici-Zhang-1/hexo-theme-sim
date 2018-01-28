@@ -1,7 +1,7 @@
 <header>
     <div class="header-row row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <a href="<%- url_for() %>" ><img src="/self.png" class="img-responsive center-block img-circle img-logo" alt="<%= config.title %>" title="<%= config.title %>"></a>
+            <a class="header-img" href="<%- url_for() %>" ><img src="/self.png" class="img-responsive center-block img-circle img-logo" alt="<%= config.title %>" title="<%= config.title %>"></a>
         </div>
     </div>
     <div class="header-row row">
@@ -27,9 +27,9 @@
                     <ul class="nav-center nav navbar-nav">
                         <% for (var i in theme.menu){ %>
                             <% if ((is_home() && theme.menu[i] == '/') || (is_category(i)) || (is_current('about') && theme.menu[i] == '/about/')) { %>
-                                <li class="active"><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+                                <li class="active"><%- link_to(theme.menu[i], i) %></li>
                             <% }else { %>
-                                <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+                                <li><%- link_to(theme.menu[i], i) %></li>
                             <% } %>
                         <% } %>
                     </ul>
