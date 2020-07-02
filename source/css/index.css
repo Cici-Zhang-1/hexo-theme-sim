@@ -206,6 +206,9 @@ article:not(:last-child){
     padding: 15px;
 }
 
+.article-content > img {
+    max-width: 100%;
+}
 .article-content .article-content-center{
     text-align: center;
 }

@@ -6,6 +6,6 @@
   "author": "Cici",
   "license": "BSD",
   "dependencies": {
-    "bootstrap": "3.3.7"
+    "bootstrap": "^3.4.1"
   }
 }
